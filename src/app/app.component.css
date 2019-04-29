@@ -1,0 +1,33 @@
+.background-main{
+background-image: url('/assets/images/black-friday-brown-from-above-5956.jpg');
+opacity: 0.6;
+content: "";
+display: block;
+position: absolute;
+margin-left: 0;
+min-width: 100%;
+min-height: 100em;
+background-color: #343a40;
+}
+.background-main-content{
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    min-width: 100%;
+    min-height: 100em;
+    }
+.app-width{
+    width:50px;
+}
+.h1-class{
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    margin-top:120px;
+}
+.p-class{
+    font-family: courier;
+    font-size:20px;
+    margin-top:10px;
+    margin-bottom:10px;
+}

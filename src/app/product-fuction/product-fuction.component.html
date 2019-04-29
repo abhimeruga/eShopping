@@ -1,0 +1,16 @@
+
+<form>
+    <div *ngIf="!isAddProduct" style="text-align:center;margin-top:70px" class="background-main-content">
+Product Name: <mat-form-field><input matInput type="text" name="productName" [(ngModel)]="productName"></mat-form-field><br/>
+Product Prize: <mat-form-field><input matInput type="text" name="prize" [(ngModel)]="prize"></mat-form-field><br/>
+<button mat-raised-button color="primary" (click)="change()">Submit</button><br/>
+</div>
+
+<div *ngIf="isAddProduct" style="text-align:center;margin-top:70px" class="background-main-content">
+    Product Name: <mat-form-field><input matInput type="text" name="productName" [(ngModel)]="productName"></mat-form-field><br/>
+    Product Prize: <mat-form-field><input matInput type="text" name="prize" [(ngModel)]="prize"></mat-form-field><br/>
+    <button mat-raised-button color="primary" (click)="addProductToList()">Submit</button><br/>
+    </div>
+</form>
+    
+    

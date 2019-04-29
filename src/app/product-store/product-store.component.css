@@ -1,0 +1,26 @@
+.background-main-content{
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    min-width: 100%;
+    min-height: 100em;
+    margin-top:70px;
+    margin-left:300px
+    }
+    p {
+        font-family: Lato;
+      }
+      
+      .example-card {
+        width: 220px;
+        margin: 4px
+      }
+      
+      .example-header-image {
+        background-size: cover;
+      }
+      .card-flex{
+        display: flex;
+        flex-flow: row wrap;
+        width:800px;
+      }

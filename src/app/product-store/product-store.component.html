@@ -1,0 +1,53 @@
+<div class="background-main-content">
+
+<div style="width:800px"  class= "form-row">
+ <form (submit)="searchProduct()"> Search :
+        <mat-form-field><input matInput placeholder="Search for product" type="text" name="search"
+           [(ngModel)]="searchValue" > </mat-form-field> </form>
+  <button mat-raised-button color="primary" *ngIf="isAdmin" (click)="addProduct()">Add Product</button>
+  <div *ngIf="!isAdmin" style="margin-right:26px!important;float:right"> Products added to cart:{{productsCartLength}} Total Prize:{{productCartPrize}}</div>
+</div>
+
+  <div class= "card-flex" >
+<div *ngFor="let product of products">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [ngStyle]="{'background-image': 'url(' + product.detailImg + ')'}"></div>
+        <mat-card-title [innerHTML]="product.productName"></mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+      <span style="display:flex">Name : {{product.productName}}</span>
+      <span style="display:flex">Prize : {{product.prize}}</span>
+      <span style="display:flex">Desc : {{product.title}}</span>
+      </mat-card-content>
+      <mat-card-actions *ngIf="isAdmin">
+          <button mat-raised-button color="accent" (click) = "goTOEditDeleteProduct('edit',product)">Edit</button>
+          <button mat-raised-button color="accent" (click) = "goTOEditDeleteProduct('delete',product)">Delete</button>
+        </mat-card-actions>
+        <mat-card-actions *ngIf="!isAdmin">
+          <button mat-raised-button color="accent" (click) = "addToCart('add',product)">Add to Cart</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+    <!--<mat-card class="example-card">
+      <mat-card-header>
+        <mat-icon>more_vert</mat-icon>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>MR. Y</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-icon>more_vert</mat-icon>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Mr. Z</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card> --> 
+
+  </div>
+  
+
+
+</div>

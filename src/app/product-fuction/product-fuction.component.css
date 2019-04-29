@@ -1,0 +1,7 @@
+.background-main-content{
+    display: block;
+    position: absolute;
+    margin-left: 0;
+    min-width: 100%;
+    min-height: 25em;
+    }
